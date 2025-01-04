@@ -1,16 +1,32 @@
 # twitter-clone
 
+### TO-DO
+- Settings
+- Profile page
+- Reply posts
+- Likes
+- Follows
+- Followers
+
 ## Project setup
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Download pocketbase
+Download pocketbase and import the configfile 'pocketbase-config.json'
+
+### Run pocketbase
+```
+pocketbase serve
+```
+
+### Compiles and hot-reloads for development (Frontend)
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production (Frontend)
 ```
 yarn build
 ```
