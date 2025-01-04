@@ -2,7 +2,7 @@
 <br>
  <div v-if="logged && render" class="mb-8">
     <div class="flex gap-x-4">
-      <img class="inline-block size-10 rounded-full ring-2 ring-[#000011]" :src="'http://127.0.0.1:8090/api/files/'+user.collectionId+'/'+user.id+'/'+user.avatar" alt="avatar">
+      <img class="inline-block size-10 rounded-full ring-2 ring-[#000011]" :src="'https://basis-cabin.pockethost.io//api/files/'+user.collectionId+'/'+user.id+'/'+user.avatar" alt="avatar">
       <textarea placeholder="What's happening?" class="bg-[#000] block" @change="(e)=>{text=e.target.value}"></textarea>
     </div>
     <div class="flex justify-between mt-4">
@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     isLogged(){
-      const pb = new PocketBase('http://127.0.0.1:8090')
+      const pb = new PocketBase('https://basis-cabin.pockethost.io/')
       if(pb.authStore.token){
         this.user = pb.authStore.record
         return true
@@ -75,7 +75,7 @@ export default {
       }
     },
     sendPost(){
-      const pb = new PocketBase('http://127.0.0.1:8090');
+      const pb = new PocketBase('https://basis-cabin.pockethost.io/');
       const formData = new FormData();
       formData.append('user', pb.authStore.record.id);
       formData.append('text', this.text);

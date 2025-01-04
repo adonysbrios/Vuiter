@@ -11,7 +11,7 @@
             <img
               class="inline-block size-10 rounded-full ring-2 ring-[#000011]"
               :src="
-                'http://127.0.0.1:8090/api/files/' +
+                'https://basis-cabin.pockethost.io//api/files/' +
                 post.expand.user.collectionId +
                 '/' +
                 post.expand.user.id +
@@ -36,7 +36,7 @@
       </div>
       <div class="grid grid-gallery gap-2">
         <img class='rounded-none' v-for="image in post.images" :src="
-                'http://127.0.0.1:8090/api/files/' +
+                'https://basis-cabin.pockethost.io//api/files/' +
                 post.collectionId +
                 '/' +
                 post.id +
@@ -74,7 +74,7 @@ export default {
     };
   },
   mounted() {
-    const pb = new PocketBase("http://127.0.0.1:8090");
+    const pb = new PocketBase("https://basis-cabin.pockethost.io/");
     const record = pb
       .collection("posts")
       .getList(1, 30, {

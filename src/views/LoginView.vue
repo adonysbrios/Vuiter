@@ -56,7 +56,7 @@ export default {
       }, 5000);
     },
     loginUser() {
-      const pb = new PocketBase("http://127.0.0.1:8090");
+      const pb = new PocketBase("https://basis-cabin.pockethost.io/");
       pb.collection("users")
         .authWithPassword(this.email, this.password)
         .then(() => this.redirect_home())
@@ -64,7 +64,7 @@ export default {
     },
   },
   mounted() {
-    const pb = new PocketBase("http://127.0.0.1:8090");
+    const pb = new PocketBase("https://basis-cabin.pockethost.io/");
     if (pb.authStore.token) {
       this.redirect_home();
     }
