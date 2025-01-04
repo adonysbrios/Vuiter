@@ -1,6 +1,8 @@
+![Screenshot (20)](https://github.com/user-attachments/assets/255be08e-3c0b-443f-ad44-a9c241a8d66e)
 # twitter-clone
 
 ### TO-DO
+
 - Settings
 - Profile page
 - Reply posts
